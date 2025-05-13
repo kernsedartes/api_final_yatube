@@ -12,6 +12,7 @@ from .serializers import (
     CustomTokenVerifySerializer,
 )
 
+
 class CustomTokenRefreshView(TokenRefreshView):
     serializer_class = CustomTokenRefreshSerializer
 
@@ -56,7 +57,10 @@ class GroupViewSet(viewsets.ReadOnlyModelViewSet):
 
 class CommentViewSet(viewsets.ModelViewSet):
     serializer_class = CommentSerializer
-    permission_classes = [IsAuthorOrReadOnly, permissions.IsAuthenticatedOrReadOnly]
+    permission_classes = [
+        IsAuthorOrReadOnly,
+        permissions.IsAuthenticatedOrReadOnly
+    ]
 
     def get_queryset(self):
         return Comment.objects.filter(post_id=self.kwargs['post_id'])

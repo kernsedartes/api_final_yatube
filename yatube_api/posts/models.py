@@ -29,6 +29,7 @@ class Post(models.Model):
         on_delete=models.CASCADE,
         blank=True, null=True
     )
+
     def __str__(self):
         return self.text
 
