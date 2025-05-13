@@ -14,25 +14,25 @@ API создан с использованием Django REST Framework. Прое
     git clone https://github.com/your-username/blog-api.git
     cd blog-api
 
-Создать и активировать виртуальное окружение:
+Создание и активировация виртуальное окружение:
 
     python -m venv venv
     source venv/bin/activate      # для Linux/macOS
     venv\Scripts\activate         # для Windows
 
-Установить зависимости:
+Установка зависимостей:
 
     pip install -r requirements.txt
 
-Создать базу данных и выполнить миграции:
+Создание базы данных и выполнение миграций:
 
     python manage.py migrate
 
-Создать суперпользователя (по желанию):
+Создание суперпользователя (по желанию):
 
-p   ython manage.py createsuperuser
+    python manage.py createsuperuser
 
-Запустить сервер:
+Запуск сервера:
 
     python manage.py runserver
 
@@ -40,11 +40,11 @@ p   ython manage.py createsuperuser
 
 Для аутентификации используется JWT:
 
-    POST /api/v1/jwt/create/ — получить access и refresh токен.
+    POST /api/v1/jwt/create/ — получение access и refresh токен.
 
-    POST /api/v1/jwt/refresh/ — обновить access токен.
+    POST /api/v1/jwt/refresh/ — обновление access токен.
 
-    POST /api/v1/jwt/verify/ — проверить валидность access токена.
+    POST /api/v1/jwt/verify/ — проверка валидность access токена.
 
 Примеры запросов к API
 
